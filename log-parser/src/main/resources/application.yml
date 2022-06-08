@@ -1,0 +1,23 @@
+server:
+  port: 8011
+
+spring:
+  application:
+    name: log-parser
+  datasource:
+    driver-class-name: org.hsqldb.jdbc.JDBCDriver
+    url: jdbc:hsqldb:file:db/alertsdb
+    username: admin
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create
+
+log-parser:
+  threshold-ms: 4
+  
+logging:
+  level:
+    org.springframework.web: DEBUG
+    com.github: DEBUG
+
